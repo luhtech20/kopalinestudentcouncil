@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopaline University Student Council</title>
+    <meta name="description" content="Official website of Kopaline University Student Council. Find information about events, student board, activities, and more.">
+    <link rel="stylesheet" href="style.css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src= "images/council logo.jpg" alt="Kopaline University Student Council Logo" class="logo">
+                <div class="logo-text">
+                    <h1>Kopaline University</h1>
+                    <p>Student Council</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="board.html">Student Board</a></li>
+                    <li><a href="election.html" target="_blank">Student Election</a></li>
+                    <li><a href="register.html">Association Registration</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Empowering Student Voices</h2>
+                <p>Representing, serving, and advocating for all Kopaline University students</p>
+                <a href="register.html" class="btn">Join Us Today</a>
+            </div>
+        </section>
+
+        <section class="upcoming-events">
+            <div class="container">
+                <h2>Upcoming Events</h2>
+                <div class="events-grid">
+                    <div class="event-card">
+                        <img src="images/event1.jpg" alt="Leadership Workshop">
+                        <div class="event-info">
+                            <h3>Leadership Workshop</h3>
+                            <p class="event-date">June 15, 2024 | 2:00 PM</p>
+                            <p>Develop your leadership skills with our interactive workshop.</p>
+                            <a href="events.html" class="btn-small">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <img src="images/event2.jpg" alt="Cultural Festival">
+                        <div class="event-info">
+                            <h3>Cultural Festival</h3>
+                            <p class="event-date">June 22, 2025 | 10:00 AM</p>
+                            <p>Celebrate the diversity of our student community.</p>
+                            <a href="events.html" class="btn-small">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-all">
+                    <a href="events.html" class="btn">View All Events</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="calendar-section">
+            <div class="container">
+                <h2>Academic Calendar</h2>
+                <div class="calendar">
+                    <div class="calendar-header">
+                        <button id="prev-month"><i class="fas fa-chevron-left"></i></button>
+                        <h3 id="current-month">June 2025</h3>
+                        <button id="next-month"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="calendar-grid" id="calendar-days">
+                        <!-- Calendar days will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-links">
+            <div class="container">
+                <h2>Quick Links</h2>
+                <div class="links-grid">
+                    <a href="register.html" class="link-card">
+                        <i class="fas fa-file-signature"></i>
+                        <h3>Association Registration</h3>
+                        <p>Register your student association with the council</p>
+                    </a>
+                    <a href="board.html" class="link-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Meet the Board</h3>
+                        <p>Get to know your student representatives</p>
+                    </a>
+                    <a href="contact.html" class="link-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Contact Us</h3>
+                        <p>Have questions? Reach out to us</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo-container">
+                        <img src="images/council logo.jpg" alt="Kopaline University Student Council Logo" class="logo">
+                        <div class="logo-text">
+                            <h4>Kopaline University</h4>
+                            <p>Student Council</p>
+                        </div>
+                    </div>
+                    <p>Representing the student body since 2022</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="board.html">Student Board</a></li>
+                        <li><a href="register.html">Registration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Kopaline University Main Campus along Kasangula Road, Roma, Lusaka</p>
+                    <p><i class="fas fa-phone"></i> (+260) 770-190-150</p>
+                    <p><i class="fas fa-envelope"></i> student.council@kopaline.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Kopaline University Student Council. All rights reserved. <br> Developed By: <bold>LUH-TECH</bold></p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
