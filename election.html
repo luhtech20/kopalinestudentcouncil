@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Council Elections</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .container {
+            width: 85%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        nav {
+            background-color: #34495e;
+            color: white;
+        }
+        nav ul {
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            padding: 10px 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #f39c12;
+        }
+        section {
+            background: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #f39c12;
+            padding-bottom: 10px;
+        }
+        .btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .btn:hover {
+            background: #2980b9;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2c3e50;
+            color: white;
+            margin-top: 20px;
+        }
+        .election-calendar {
+            background: #eaf2f8;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+        }
+        .hidden {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        .tab-buttons {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            background: #ecf0f1;
+            border: none;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+        .tab-btn.active {
+            background: #3498db;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Student Council Elections 2025</h1>
+            <p>Your Voice, Your Choice, Your Future</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#constitution">Constitution</a></li>
+            <li><a href="#voting">Voting</a></li>
+            <li><a href="#registration">Registration</a></li>
+            <li><a href="#guidelines">Guidelines</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="home">
+            <h2>Welcome to Student Elections</h2>
+            <p>Participate in shaping the future of our student community by exercising your right to vote or standing as a candidate.</p>
+            
+            <div class="election-calendar">
+                <h3>Election Calendar</h3>
+                <ul>
+                    <li><strong>Registration Opens:</strong> 30 May, 2025</li>
+                    <li><strong>Registration Closes:</strong> June 15, 2025</li>
+                    <li><strong>Campaign Period:</strong> May 19 to June 17, 2025</li>
+                    <li><strong>Voting Day:</strong> June 20, 2025</li>
+                    <li><strong>Results Announcement:</strong> June 21, 2025</li>
+                </ul>
+            </div>
+
+            <div style="display: flex; justify-content: space-around; margin-top: 30px;">
+                <div style="text-align: center;">
+                    <h3>Voter Registration</h3>
+                    <p>Register to vote in the upcoming elections</p>
+                    <a href="https://forms.gle/bAcaWVHnfmbrf8Jx9" class="btn">Register as Voter</a>
+                </div>
+                <div style="text-align: center;">
+                    <h3>Candidate Registration</h3>
+                    <p>Apply to run for a student council position</p>
+                    <a href="https://forms.gle/svkGx1C5nYWqbXXs5" class="btn">Register as Candidate</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="constitution">
+            <h2>Student Council Constitution</h2>
+            <p>The constitution outlines the rules and regulations governing the student council and elections.</p>
+            
+            <h3>Article 1: Purpose</h3>
+            <p>1. This constitution shall be known as and called the 2022 constitution of the students Union, 
+                KOPALINE UNIVERSITY, (hereinafter referred to as “The Constitution”).</p>
+            <p>2. The organization established by this constitution shall be known and addressed as the “students" 
+                Union Government” of the KOPALINE UNIVERSITY (hereinafter referred to as “the Union”).</p>
+            <h3>Article 15: THE OFFICERS OF THE EXECUTIVE COUNCIL</h3>
+            <ul>
+                <li>President</li>
+                <li>Vice President</li>
+                <li>Prime Minister</li>
+                <li>Minister of Entertainment and Arts</li> 
+                <LI>Minister of Welfare and residential affairs</LI>
+                <li>Minister of Financial</li>
+                <li>Minister of Academics</li>
+                <li>Minister of Information and Media</li>
+                <li>Minister of Sports</li>
+                <li>Minister of Religious</li>
+                <li>Minister of Healthr</li>
+                <li>Minister of Foreign Affairs</li>
+                <li>Online Representative</li>
+            </ul>
+            
+            <h3>Article 41: The Election</h3>
+            <p>Subject to the provisions of this constitution, there shall be an annual general election of the Union.</p>
+            <p>The Union elections shall be held on the last Friday of the first semester of every Academic Year.</p>
+            <a href="https://drive.google.com/file/d/1cOgMtuiWpBzv6lkntv5HYLqCeH8NS2KJ/view?usp=sharing" class="btn">Download Full Constitution (PDF)</a>
+        </section>
+
+        <section id="voting">
+            <h2>Voting Information</h2>
+            
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="openTab('voting-process')">Voting Process</button>
+                <button class="tab-btn" onclick="openTab('voter-eligibility')">Voter Eligibility</button>
+                <button class="tab-btn" onclick="openTab('candidates')">Meet the Candidates</button>
+            </div>
+            
+            <div id="voting-process" class="tab-content active">
+                <h3>How to Vote</h3>
+                <ol>
+                    <li>Ensure you're registered as a voter</li>
+                    <li>Log in to the student portal on voting day</li>
+                    <li>Navigate to the elections section</li>
+                    <li>Select your preferred candidates</li>
+                    <li>Review your selections and submit your ballot</li>
+                </ol>
+                <p><strong>Voting Hours:</strong> 05:00 AM - 6:00 PM on Election Day</p>
+            </div>
+            
+            <div id="voter-eligibility" class="tab-content hidden">
+                <h3>Voter Eligibility Requirements</h3>
+                <ul>
+                    <li>Must be a currently enrolled student</li>
+                    <li>Must be in good academic standing (GPA ≥ 2.0)</li>
+                    <li>Must not have any disciplinary actions in the current semester</li>
+                    <li>Must have completed voter registration by the deadline</li>
+                </ul>
+            </div>
+            
+            <div id="candidates" class="tab-content hidden">
+                <h3>2025 Candidates</h3>
+                <p>Candidate profiles will be available once the registration period closes.</p>
+                <p>Check back on June 16 to learn about your candidates!</p>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <a href="https://kopalinestudentelections.fillout.com/2025" class="btn">Access Voting Portal (Available on Election Day)</a>
+            </div>
+        </section>
+
+        <section id="registration">
+            <h2>Registration</h2>
+            
+            <div id="voter-registration">
+                <h3>Voter Registration</h3>
+                <p>All students must register to vote, even if you're automatically eligible.</p> 
+                <!--<form>
+                    <div style="margin-bottom: 15px;">
+                        <label for="student-id">Student ID Number:</label><br>
+                        <input type="text" id="student-id" name="student-id" required style="width: 100%; padding: 8px;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <label for="email">School Email:</label><br>
+                        <input type="email" id="email" name="email" required style="width: 100%; padding: 8px;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <label for="grade">Grade Level:</label><br>
+                        <select id="grade" name="grade" style="width: 100%; padding: 8px;">
+                            <option value="freshman">Freshman</option>
+                            <option value="sophomore">Sophomore</option>
+                            <option value="junior">Junior</option>
+                            <option value="senior">Senior</option>
+                        </select>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <input type="checkbox" id="eligibility" name="eligibility" required>
+                        <label for="eligibility">I confirm that I meet all voter eligibility requirements</label>
+                    </div> -->
+                    <button type="submit" class="btn">Voter Registration</button>
+                </form>
+            </div>
+            
+            <div id="candidate-registration" style="margin-top: 40px;">
+                <h3>Candidate Registration</h3>
+                <p>Students interested in running for office must complete this registration form.</p>
+                <!-- <form>
+                    <div style="margin-bottom: 15px;">
+                        <label for="candidate-id">Student ID Number:</label><br>
+                        <input type="text" id="candidate-id" name="candidate-id" required style="width: 100%; padding: 8px;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <label for="candidate-email">School Email:</label><br>
+                        <input type="email" id="candidate-email" name="candidate-email" required style="width: 100%; padding: 8px;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <label for="position">Position Sought:</label><br>
+                        <select id="position" name="position" style="width: 100%; padding: 8px;">
+                            <option value="president">President</option>
+                            <option value="vice-president">Vice President</option>
+                            <option value="secretary">Secretary</option>
+                            <option value="treasurer">Treasurer</option>
+                            <option value="representative">Class Representative</option>
+                        </select>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <label for="grade">Grade Level:</label><br>
+                        <select id="grade" name="grade" style="width: 100%; padding: 8px;">
+                            <option value="freshman">Freshman</option>
+                            <option value="sophomore">Sophomore</option>
+                            <option value="junior">Junior</option>
+                            <option value="senior">Senior</option>
+                        </select>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <label for="statement">Candidate Statement (max 300 words):</label><br>
+                        <textarea id="statement" name="statement" rows="5" style="width: 100%; padding: 8px;"></textarea>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <input type="checkbox" id="candidate-eligibility" name="candidate-eligibility" required>
+                        <label for="candidate-eligibility">I confirm that I meet all candidate eligibility requirements</label>
+                    </div> -->
+                    <button type="submit" class="btn">Candidate Application</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="guidelines">
+            <h2>Election Guidelines</h2>
+            
+            <h3>Voter Guidelines</h3>
+            <ul>
+                <li>Each voter may cast one ballot</li>
+                <li>Voting must be done in person unless special arrangements are made</li>
+                <li>No campaigning within 50 feet of polling stations</li>
+                <li>Voter coercion is strictly prohibited</li>
+                <li>Report any suspicious activity to election officials immediately</li>
+            </ul>
+            
+            <h3>Campaign Guidelines</h3>
+            <ul>
+                <li>Campaigning may only occur during the designated campaign period</li>
+                <li>All campaign materials must be approved by the election committee</li>
+                <li>No defamatory statements about opponents</li>
+                <li>Digital campaigns must follow school social media policies</li>
+            </ul>
+            
+            <h3>Code of Conduct</h3>
+            <p>All participants in the election process (voters, candidates, and supporters) are expected to:</p>
+            <ul>
+                <li>Treat all participants with respect</li>
+                <li>Engage in fair and honest campaigning</li>
+                <li>Accept the final results of the election gracefully</li>
+                <li>Report any violations of election rules</li>
+                <li>Uphold the values of the school community</li>
+            </ul>
+            
+            <a href="https://drive.google.com/file/d/1laYXYf0QmgacuLsoWOVv98opWauoWwV8/view?usp=sharing" class="btn">Download Complete Election Guidelines (PDF)</a>
+            <a href="https://drive.google.com/file/d/1x2ryWiIv85cNiyrvFJi5UoIMpUIC2sPo/view?usp=sharing" class="btn">Download Complete Campaign Guidelines (PDF)</a>
+        </section>
+
+        <section>
+            <h2>Election Results</h2>
+            <p>Results will be posted here after the election concludes and votes are tallied.</p>
+            <p>Check back on June 21, 2025 for official results.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 Student Council Election Committee | Contact: electoralcommission.kopaline@gmail.com<br> Developed By: <bold>LUH-TECH</bold></p>
+    </footer>
+
+    <script>
+        function openTab(tabId) {
+            // Hide all tab content
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+                content.classList.add('hidden');
+            });
+            
+            // Remove active class from all buttons
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            tabButtons.forEach(button => {
+                button.classList.remove('active');
+            });
+            
+            // Show the selected tab content
+            document.getElementById(tabId).classList.remove('hidden');
+            document.getElementById(tabId).classList.add('active');
+            
+            // Add active class to clicked button
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
