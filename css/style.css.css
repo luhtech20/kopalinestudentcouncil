@@ -33,7 +33,7 @@ html, body {
 .container {
     width: 100%;
     max-width: 1200px;
-    padding: 10px; /* Reduce padding on mobile */
+    padding: 0 15px; /* Reduce padding on mobile */
 }
 
 
@@ -99,6 +99,7 @@ a:hover {
     nav ul li {
         width: 100%;
         text-align: center;
+        margin: 5px 0;
     }
 }
 
