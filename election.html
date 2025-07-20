@@ -5,69 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Council Elections</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+        /* Reset and Base Styles */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
             background-color: #f5f5f5;
             color: #333;
         }
-        * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        
+        /* Layout Styles */
+        .container {
+            width: 95%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+        
+        /* Header Styles */
         header {
             background-color: #2c3e50;
             color: white;
             padding: 1rem 0;
             text-align: center;
         }
-        @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    nav ul li {
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-    }
-}
-        html, body {
-    max-width: 100%;
-    overflow-x: hidden; /* Prevents horizontal scrolling */
-}
-
-.container {
-    width: 95%;
-    max-width: 1200px;
-    padding: 0 10px; 
-        }
+        
+        /* Navigation Styles */
         nav {
             background-color: #34495e;
             color: white;
         }
+        
         nav ul {
             padding: 0;
             list-style: none;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
         }
+        
         nav li {
             padding: 10px 20px;
         }
+        
         nav a {
             color: white;
             text-decoration: none;
             font-weight: bold;
         }
+        
         nav a:hover {
             color: #f39c12;
         }
+        
+        /* Section Styles */
         section {
             background: white;
             margin: 20px 0;
@@ -75,11 +73,20 @@
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
+        
         h2 {
             color: #2c3e50;
             border-bottom: 2px solid #f39c12;
             padding-bottom: 10px;
+            margin-bottom: 15px;
         }
+        
+        h3 {
+            margin: 15px 0 10px;
+            color: #2c3e50;
+        }
+        
+        /* Button Styles */
         .btn {
             display: inline-block;
             background: #3498db;
@@ -91,10 +98,14 @@
             text-decoration: none;
             font-size: 16px;
             margin: 10px 0;
+            transition: background 0.3s ease;
         }
+        
         .btn:hover {
             background: #2980b9;
         }
+        
+        /* Footer Styles */
         footer {
             text-align: center;
             padding: 20px;
@@ -102,31 +113,75 @@
             color: white;
             margin-top: 20px;
         }
+        
+        /* Special Components */
         .election-calendar {
             background: #eaf2f8;
             padding: 15px;
             border-left: 4px solid #3498db;
+            margin: 20px 0;
         }
+        
+        .registration-options {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .registration-option {
+            text-align: center;
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        /* Tab System */
         .hidden {
             display: none;
         }
+        
         .active {
             display: block;
         }
+        
         .tab-buttons {
             display: flex;
             margin-bottom: 20px;
+            flex-wrap: wrap;
         }
+        
         .tab-btn {
             padding: 10px 20px;
             background: #ecf0f1;
             border: none;
             cursor: pointer;
             margin-right: 5px;
+            margin-bottom: 5px;
+            transition: all 0.3s ease;
         }
+        
         .tab-btn.active {
             background: #3498db;
             color: white;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                width: 100%;
+                text-align: center;
+                padding: 10px 0;
+            }
+            
+            .registration-options {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -140,7 +195,7 @@
 
     <nav>
         <ul>
-            <li class="active"><a href="index.html">Home</a></li>
+            <li class="active"><a href="#home">Home</a></li>
             <li><a href="#constitution">Constitution</a></li>
             <li><a href="#voting">Voting</a></li>
             <li><a href="#registration">Registration</a></li>
@@ -160,17 +215,17 @@
                     <li><strong>Registration Closes:</strong> June 15, 2025</li>
                     <li><strong>Campaign Period:</strong> May 19 to June 19, 2025</li>
                     <li><strong>Voting Day:</strong> June 20, 2025</li>
-                    <li><strong> Official Results Announcement:</strong> June 21, 2025</li>
+                    <li><strong>Official Results Announcement:</strong> June 21, 2025</li>
                 </ul>
             </div>
 
-            <div style="display: flex; justify-content: space-around; margin-top: 30px;">
-                <div style="text-align: center;">
+            <div class="registration-options">
+                <div class="registration-option">
                     <h3>Voter Registration</h3>
                     <p>Register to vote in the upcoming elections</p>
                     <a href="https://forms.gle/bAcaWVHnfmbrf8Jx9" class="btn">Register as Voter</a>
                 </div>
-                <div style="text-align: center;">
+                <div class="registration-option">
                     <h3>Candidate Registration</h3>
                     <p>Apply to run for a student council position</p>
                     <a href="https://forms.gle/svkGx1C5nYWqbXXs5" class="btn">Register as Candidate</a>
@@ -184,22 +239,23 @@
             
             <h3>Article 1: Purpose</h3>
             <p>1. This constitution shall be known as and called the 2022 constitution of the students Union, 
-                KOPALINE UNIVERSITY, (hereinafter referred to as “The Constitution”).</p>
-            <p>2. The organization established by this constitution shall be known and addressed as the “students" 
-                Union Government” of the KOPALINE UNIVERSITY (hereinafter referred to as “the Union”).</p>
+                KOPALINE UNIVERSITY, (hereinafter referred to as "The Constitution").</p>
+            <p>2. The organization established by this constitution shall be known and addressed as the "students" 
+                Union Government" of the KOPALINE UNIVERSITY (hereinafter referred to as "the Union").</p>
+            
             <h3>Article 15: THE OFFICERS OF THE EXECUTIVE COUNCIL</h3>
             <ul>
                 <li>President</li>
                 <li>Vice President</li>
                 <li>Prime Minister</li>
                 <li>Minister of Entertainment and Arts</li> 
-                <LI>Minister of Welfare and residential affairs</LI>
+                <li>Minister of Welfare and residential affairs</li>
                 <li>Minister of Financial</li>
                 <li>Minister of Academics</li>
                 <li>Minister of Information and Media</li>
                 <li>Minister of Sports</li>
                 <li>Minister of Religious</li>
-                <li>Minister of Healthr</li>
+                <li>Minister of Health</li>
                 <li>Minister of Foreign Affairs</li>
                 <li>Online Representative</li>
             </ul>
@@ -241,24 +297,11 @@
                 </ul>
             </div>
             
-          <div id="candidates" class="tab-content hidden">
-    <h3>2025 Candidates</h3>
-    <!--     <p>Candidate profiles will be available once the registration period closes.</p>
-    <p>Check back on June 16 to learn about your candidates!</p>Link to Video -->
-              
-    <p><a href="https://drive.google.com/file/d/1fcX2DaSb60r9uNk65wwwujhERSCW-Qts/view?usp=sharing" target="_blank" rel="noopener noreferrer">Watch Candidates Videos</a></p>
-</div>
+            <div id="candidates" class="tab-content hidden">
+                <h3>2025 Candidates</h3>
+                <p><a href="https://drive.google.com/file/d/1fcX2DaSb60r9uNk65wwwujhERSCW-Qts/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn">Watch Candidates Videos</a></p>
+            </div>
 
-
-    <!-- <video width="560" height="315" controls>
-    <source src="videos/candidates.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
-            <div class="video-container">
-        <iframe width="560" height="315" src="https://drive.google.com/file/d/1fcX2DaSb60r9uNk65wwwujhERSCW-Qts/view?usp=sharing" frameborder="0" allowfullscreen></iframe>
-    </div>
-</div>
- -->
             <div style="margin-top: 20px;">
                 <a href="https://studentelectionkopaline.infinityfreeapp.com/voter/login.php" class="btn">Access Voting Portal (Available on Election Day)</a>
             </div>
@@ -269,74 +312,14 @@
             
             <div id="voter-registration">
                 <h3>Voter Registration</h3>
-                <p>All students must register to vote, even if you're automatically eligible.</p> 
-                <!--<form>
-                    <div style="margin-bottom: 15px;">
-                        <label for="student-id">Student ID Number:</label><br>
-                        <input type="text" id="student-id" name="student-id" required style="width: 100%; padding: 8px;">
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <label for="email">School Email:</label><br>
-                        <input type="email" id="email" name="email" required style="width: 100%; padding: 8px;">
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <label for="grade">Grade Level:</label><br>
-                        <select id="grade" name="grade" style="width: 100%; padding: 8px;">
-                            <option value="freshman">Freshman</option>
-                            <option value="sophomore">Sophomore</option>
-                            <option value="junior">Junior</option>
-                            <option value="senior">Senior</option>
-                        </select>
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <input type="checkbox" id="eligibility" name="eligibility" required>
-                        <label for="eligibility">I confirm that I meet all voter eligibility requirements</label>
-                    </div> -->
-                    <button type="submit" class="btn">Voter Registration</button>
-                </form>
+                <p>All students must register to vote, even if you're automatically eligible.</p>
+                <a href="https://forms.gle/bAcaWVHnfmbrf8Jx9" class="btn">Voter Registration</a>
             </div>
             
             <div id="candidate-registration" style="margin-top: 40px;">
                 <h3>Candidate Registration</h3>
                 <p>Students interested in running for office must complete this registration form.</p>
-                <!-- <form>
-                    <div style="margin-bottom: 15px;">
-                        <label for="candidate-id">Student ID Number:</label><br>
-                        <input type="text" id="candidate-id" name="candidate-id" required style="width: 100%; padding: 8px;">
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <label for="candidate-email">School Email:</label><br>
-                        <input type="email" id="candidate-email" name="candidate-email" required style="width: 100%; padding: 8px;">
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <label for="position">Position Sought:</label><br>
-                        <select id="position" name="position" style="width: 100%; padding: 8px;">
-                            <option value="president">President</option>
-                            <option value="vice-president">Vice President</option>
-                            <option value="secretary">Secretary</option>
-                            <option value="treasurer">Treasurer</option>
-                            <option value="representative">Class Representative</option>
-                        </select>
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <label for="grade">Grade Level:</label><br>
-                        <select id="grade" name="grade" style="width: 100%; padding: 8px;">
-                            <option value="freshman">Freshman</option>
-                            <option value="sophomore">Sophomore</option>
-                            <option value="junior">Junior</option>
-                            <option value="senior">Senior</option>
-                        </select>
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <label for="statement">Candidate Statement (max 300 words):</label><br>
-                        <textarea id="statement" name="statement" rows="5" style="width: 100%; padding: 8px;"></textarea>
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <input type="checkbox" id="candidate-eligibility" name="candidate-eligibility" required>
-                        <label for="candidate-eligibility">I confirm that I meet all candidate eligibility requirements</label>
-                    </div> -->
-                    <button type="submit" class="btn">Candidate Application</button>
-                </form>
+                <a href="https://forms.gle/svkGx1C5nYWqbXXs5" class="btn">Candidate Application</a>
             </div>
         </section>
 
@@ -382,7 +365,7 @@
     </div>
 
     <footer>
-        <p>© 2025 Student Council Election Committee | Contact: electoralcommission.kopaline@gmail.com<br> Developed By: <bold>LUH-TECH</bold></p>
+        <p>© 2025 Student Council Election Committee | Contact: electoralcommission.kopaline@gmail.com<br> Developed By: <strong>LUH-TECH</strong></p>
     </footer>
 
     <script>
